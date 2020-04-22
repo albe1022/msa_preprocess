@@ -1,0 +1,12 @@
+workflow\config\kafka\KafkaProcessor.class
+workflow\ProcessedData.class
+workflow\ProcessedDataController.class
+workflow\DataSaved.class
+workflow\RawData.class
+workflow\AbstractEvent.class
+workflow\ProcessedDataRepository.class
+workflow\RawDataRepository.class
+workflow\DataPreprocessed.class
+workflow\PolicyHandler.class
+workflow\Application.class
+workflow\RawDataViewHandler.class
