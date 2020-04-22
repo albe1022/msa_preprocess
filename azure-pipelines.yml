@@ -14,7 +14,7 @@ variables:
   # containerRegistryDockerConnection: 'acr'
   # environment: 'aks.default'
 - name: imageRepository
-  value: 'Preprocess'
+  value: 'preprocess'
 - name: dockerfilePath
   value: '**/Dockerfile'
 - name: tag
