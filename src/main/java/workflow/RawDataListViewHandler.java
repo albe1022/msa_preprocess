@@ -11,23 +11,23 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class RawDataViewHandler {
+public class RawDataListViewHandler {
 
 
     @Autowired
-    private RawDataRepository rawDataRepository;
+    private RawDataListRepository rawDataListRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whenDataSaved_then_CREATE_1 (@Payload DataSaved dataSaved) {
         try {
             if (dataSaved.isMe()) {
                 // view 객체 생성
-                RawData rawData = new RawData();
+                RawDataList rawDataList = new RawDataList();
                 // view 객체에 이벤트의 Value 를 set 함
-                rawData.setId(dataSaved.getId());
-                rawData.setDataType(dataSaved.getDataType());
+                rawDataList.setId(dataSaved.getId());
+                rawDataList.setDataType(dataSaved.getDataType());
                 // view 레파지 토리에 save
-                rawDataRepository.save(rawData);
+                rawDataListRepository.save(rawDataList);
             }
         }catch (Exception e){
             e.printStackTrace();

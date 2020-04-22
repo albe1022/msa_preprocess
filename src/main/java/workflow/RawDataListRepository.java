@@ -5,7 +5,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface RawDataRepository extends CrudRepository<RawData, Long> {
+public interface RawDataListRepository extends CrudRepository<RawDataList, Long> {
 
 
 }
