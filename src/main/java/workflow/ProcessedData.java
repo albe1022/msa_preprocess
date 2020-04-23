@@ -20,6 +20,11 @@ public class ProcessedData {
         BeanUtils.copyProperties(this, dataPreprocessed);
         dataPreprocessed.publish();
 
+        try {
+            Thread.currentThread().sleep((long) (400 + Math.random() * 220));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
